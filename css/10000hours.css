@@ -1,3 +1,6 @@
+@charset "utf-8";
+
+/* font */
 @font-face {
     font-family: 'OTEnjoystoriesBA';
     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/OTEnjoystoriesBA.woff') format('woff');
@@ -26,4 +29,86 @@
     src: url("https://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.woff2") format('woff2'),
     url("https://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.woff") format('woff'),
     url("https://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.otf") format('opentype');
+}
+
+
+/* layout */
+body{
+    background-color: #5B2386;
+    font-family: 'GmarketSansMedium';
+    font-size: 1.5rem;
+    color: #fff;
+}
+
+.wrapping{
+    width: 75rem;
+    max-width: calc(100% - 3rem);
+    margin: 8.75rem auto 4.375rem;
+}
+
+/* design */
+.header{
+    padding: 3.375rem 0 3.688rem;
+    background-image: url(../img/clock.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.header .logo{
+    width: 35.25rem;
+    margin: auto;
+}
+/* header end */
+
+.main{
+    margin: 4.125rem 0 8.125rem;
+    text-align: center;
+}
+.main .tit-main{
+    color: #F5DF4D;
+    font-size: 36px;
+    font-family: 'OTEnjoystoriesBA';
+}
+.main .txt-explan{
+    font-size: 1.125rem;
+    line-height: 1.5;
+    background: url(../img/quotes.png) no-repeat center;
+    margin: 4.875rem 6.375rem;
+}
+
+.main .txt-explan strong{
+    font-family: 'GmarketSansBold';
+    font-size: 1.5rem;
+}
+.txt-job{
+    margin-bottom: 1.688rem;
+}
+
+.input-job, 
+.input-time{
+    width: 14.25rem;
+    padding: 1.063rem 0 1rem;
+    margin:0 1.063rem;
+    border-radius: 0.438rem;
+    text-align: center;
+    color: #111;
+    font-size: 1.5rem;
+    line-height: 1;
+    font-family: 'GmarketSansMedium';
+}
+
+.main input:focus, .main input:active{
+    outline: 5px solid #FCEE21;
+}
+
+/*input[type=number] 화살표 삭제 Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/*input[type=number] 화살표 삭제 Firefox */
+input[type=number] {
+    -moz-appearance: textfield;
 }

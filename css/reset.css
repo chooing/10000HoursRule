@@ -46,3 +46,31 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+
+/* 추가  */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.txt-hide {
+    position: absolute;
+    clip: rect(0 0 0 0);
+    width: 1px;
+    height: 1px;
+    /* margin: -1px; */
+    overflow: hidden;
+}
+
+img {
+    width: 100%;
+    vertical-align: top;
+}
+
+input{
+	padding: 0;
+	margin: 0;
+	border: none;
+	color: inherit;
+	font-family: inherit;
+}
