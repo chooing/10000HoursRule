@@ -1,12 +1,12 @@
 @charset "utf-8";
 
 /* font */
-@font-face {
+/* @font-face {
     font-family: 'OTEnjoystoriesBA';
     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/OTEnjoystoriesBA.woff') format('woff');
     font-weight: normal;
     font-style: normal;
-}
+} */
 
 @font-face {
     font-family: 'GmarketSansBold';
@@ -31,74 +31,24 @@
     url("https://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.otf") format('opentype');
 }
 
+:root{
+    --main:#5B2386;
+    --sub:#FCEE21;
+}
 
 /* layout */
 body{
-    background-color: #5B2386;
+    background-color: var(--main);
     font-family: 'GmarketSansMedium';
     font-size: 1.5rem;
     color: #fff;
+    word-break: keep-all;
 }
 
 .wrapping{
     width: 75rem;
     max-width: calc(100% - 3rem);
     margin: 8.75rem auto 4.375rem;
-}
-
-/* design */
-.header{
-    padding: 3.375rem 0 3.688rem;
-    background-image: url(../img/clock.png);
-    background-repeat: no-repeat;
-    background-position: center;
-}
-
-.header .logo{
-    width: 35.25rem;
-    margin: auto;
-}
-/* header end */
-
-.main{
-    margin: 4.125rem 0 8.125rem;
-    text-align: center;
-}
-.main .tit-main{
-    color: #F5DF4D;
-    font-size: 36px;
-    font-family: 'OTEnjoystoriesBA';
-}
-.main .txt-explan{
-    font-size: 1.125rem;
-    line-height: 1.5;
-    background: url(../img/quotes.png) no-repeat center;
-    margin: 4.875rem 6.375rem;
-}
-
-.main .txt-explan strong{
-    font-family: 'GmarketSansBold';
-    font-size: 1.5rem;
-}
-.txt-job{
-    margin-bottom: 1.688rem;
-}
-
-.input-job, 
-.input-time{
-    width: 14.25rem;
-    padding: 1.063rem 0 1rem;
-    margin:0 1.063rem;
-    border-radius: 0.438rem;
-    text-align: center;
-    color: #111;
-    font-size: 1.5rem;
-    line-height: 1;
-    font-family: 'GmarketSansMedium';
-}
-
-.main input:focus, .main input:active{
-    outline: 5px solid #FCEE21;
 }
 
 /*input[type=number] 화살표 삭제 Chrome, Safari, Edge, Opera */
@@ -111,4 +61,134 @@ input::-webkit-inner-spin-button {
 /*input[type=number] 화살표 삭제 Firefox */
 input[type=number] {
     -moz-appearance: textfield;
+}
+
+/* design */
+.header{
+    padding: 3.375rem 0 3.688rem;
+    background-image: url(../img/clock.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.header .logo{
+    max-width: 35.25rem;
+    margin: auto;
+}
+
+/* .header .logo a{
+    display: inline-block;
+    width: 100%;
+} */
+/* header end */
+
+.main{
+    margin: 4.125rem 0 8.125rem;
+    text-align: center;
+}
+
+.main .tit-main{
+    background: url(../img/tit_main.png) no-repeat center;
+    /* background-size: 30.375rem; */
+    /* background-size: max-width(30.375rem); */
+    background-size: 30.375rem;
+    padding: 0.5rem 0;
+}
+
+.main .txt-explan{
+    font-size: 1.125rem;
+    line-height: 1.5;
+    background: url(../img/quotes.png) no-repeat center;
+    margin: 4.875rem auto;
+}
+
+.main .txt-explan strong{
+    font-family: 'GmarketSansBold';
+    font-size: 1.5rem;
+}
+
+.main .btn{
+    padding: 1.3125rem 3.0625rem;
+    border-radius: 100vw;
+    border: none;
+    font-family: 'GmarketSansBold';
+    font-size: inherit;
+    color: var(--main);
+    cursor: pointer;
+}
+
+.form-plan .txt-plan{
+    line-height: 2.625;
+}
+
+.txt-plan + .txt-plan{
+    margin-top: 1.688rem;
+}
+
+.form-plan .inp{
+    width: 14.25rem;
+    padding: 1.063rem 0 1rem;
+    margin:0 1.063rem;
+    border-radius: 0.438rem;
+    text-align: center;
+    color: #111;
+    font-size: 1.5rem;
+    line-height: 1;
+    font-family: 'GmarketSansBold';
+}
+
+.form-plan .inp:focus, .form-plan .inp:active{
+    outline: 5px solid var(--sub);
+}
+
+.form-plan .btn-result{
+    background-color: var(--sub);
+    margin-top: 7.1875rem;
+}
+
+.rule_result{
+    margin-top: 9.1875rem;
+}
+
+.rule_result .txt-result {
+    line-height: 3;
+}
+
+.txt-result + .txt-result{
+    margin-top: 1.0625rem;
+}
+
+.rule_result .txt-result strong{
+    padding:  0 0.75rem;
+    vertical-align: top;
+    line-height: 1;
+    font-size: 4.5rem;
+}
+
+.btn-wrap{
+    margin: 7.9375rem auto 0;
+    max-width: 47.083%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn-edu{
+    background-color: var(--sub);
+    /* padding-right: 1.125rem; */
+}
+/* .main end */
+
+.footer{
+    margin-bottom: 4.375rem;
+    font-size: 0.75rem;
+    text-align: center;
+    font-family: 'Noto Sans KR';
+}
+
+.footer-logo{
+    max-width:7.8125rem;
+    margin: 0 auto 1.25rem;
+}
+.txt-footer{
+    line-height: 1.25;    
 }
