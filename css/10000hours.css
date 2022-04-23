@@ -76,10 +76,11 @@ input[type=number] {
     margin: auto;
 }
 
-/* .header .logo a{
+.header .logo a{
     display: inline-block;
-    width: 100%;
-} */
+    height: 100%;
+}
+
 /* header end */
 
 .main{
@@ -90,8 +91,7 @@ input[type=number] {
 .main .tit-main{
     background: url(../img/tit_main.png) no-repeat center;
     /* background-size: 30.375rem; */
-    /* background-size: max-width(30.375rem); */
-    background-size: 30.375rem;
+    background-size: contain;
     padding: 0.5rem 0;
 }
 
@@ -99,7 +99,7 @@ input[type=number] {
     font-size: 1.125rem;
     line-height: 1.5;
     background: url(../img/quotes.png) no-repeat center;
-    margin: 4.875rem auto;
+    margin: 4.875rem 0;
 }
 
 .main .txt-explan strong{
@@ -132,7 +132,7 @@ input[type=number] {
     border-radius: 0.438rem;
     text-align: center;
     color: #111;
-    font-size: 1.5rem;
+    font-size: inherit;
     line-height: 1;
     font-family: 'GmarketSansBold';
 }
@@ -159,6 +159,7 @@ input[type=number] {
 }
 
 .rule_result .txt-result strong{
+    font-family: 'GmarketSansBold';
     padding:  0 0.75rem;
     vertical-align: top;
     line-height: 1;
@@ -166,20 +167,16 @@ input[type=number] {
 }
 
 .btn-wrap{
-    margin: 7.9375rem auto 0;
-    max-width: 47.083%;
-    display: flex;
-    justify-content: space-between;
+    margin-top: 7.9375rem;
 }
 
 .btn-edu{
     background-color: var(--sub);
-    /* padding-right: 1.125rem; */
+    margin-right: 1.125rem;
 }
 /* .main end */
 
 .footer{
-    margin-bottom: 4.375rem;
     font-size: 0.75rem;
     text-align: center;
     font-family: 'Noto Sans KR';
@@ -191,4 +188,94 @@ input[type=number] {
 }
 .txt-footer{
     line-height: 1.25;    
+}
+
+/* media */
+
+@media screen and (max-width:360px) {
+    body{
+        font-size: 0.875rem;
+    }
+
+    .wrapping {
+        margin: 3.125rem auto 2rem;
+
+    }
+    .header {
+        padding: 1.563rem 0 1.75rem;
+        background-size: 40%;
+    }
+    
+    .main{
+        margin: 2.5rem 0 5.188rem;
+    }
+
+    .main .txt-explan{
+        margin: 3.875rem 0 4.125rem;
+        font-size: inherit;
+        line-height: 2;
+    }
+    .main .txt-explan strong{
+        font-size: inherit;
+    }
+
+    .main .btn{
+        padding: 0.844rem 1.094rem 0.781rem;
+
+    }
+
+    .txt-plan + .txt-plan{
+        margin-top: 0;
+        line-height: 3;
+    }
+
+    .form-plan .inp{
+        width: 9.75rem;
+        padding: 0.75rem 0 0.688rem;
+        margin:0 0.25rem;
+    }
+
+    .form-plan .btn-result{
+        padding: 1.188rem 2.281rem 1.063rem;
+        margin-top: 3.063rem;
+        border-radius: 0.813rem;
+    }
+    .form-plan .btn-result span{
+        display: block;
+    }
+
+    .rule_result{
+        margin-top: 4rem;
+    }
+
+    .rule_result .txt-result{
+        line-height: 1;
+    }
+
+    .rule_result .txt-result strong{
+        font-size: 1.5rem;
+        vertical-align: middle;
+        padding:  0 0.5rem;
+    }
+
+    .btn-wrap{
+        margin-top: 3.438rem;
+    }
+
+    .btn-edu{
+        margin-right: 0.813rem;
+    }
+
+    .footer-logo{
+        max-width: 5.688rem;
+        margin: 0 auto 1.063rem;
+    }
+
+    .footer{
+        font-size: 0.563em;
+    }
+    .txt-footer{
+        line-height: 1.4;    
+    }
+
 }
